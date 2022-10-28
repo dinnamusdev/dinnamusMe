@@ -1,0 +1,25 @@
+<xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:rs="urn:schemas-microsoft-com:rowset" xmlns:z="#RowsetSchema">
+	<s:Schema id="RowsetSchema">
+		<s:ElementType name="row" content="eltOnly" rs:updatable="true">
+			<s:AttributeType name="chaveunica" rs:number="1" rs:basecatalog="PRINCIPAL" rs:basetable="itensgradeproduto" rs:basecolumn="chaveunica" rs:keycolumn="true" rs:autoincrement="true">
+				<s:datatype dt:type="int" dt:maxLength="4" rs:precision="10" rs:fixedlength="true" rs:maybenull="false"/>
+			</s:AttributeType>
+			<s:AttributeType name="codbarraint" rs:number="2" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="PRINCIPAL" rs:basetable="itensgradeproduto" rs:basecolumn="codbarraint">
+				<s:datatype dt:type="string" dt:maxLength="50"/>
+			</s:AttributeType>
+			<s:AttributeType name="codbarraforn" rs:number="3" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="PRINCIPAL" rs:basetable="itensgradeproduto" rs:basecolumn="codbarraforn">
+				<s:datatype dt:type="string" dt:maxLength="50"/>
+			</s:AttributeType>
+			<s:AttributeType name="referencia" rs:number="4" rs:nullable="true" rs:writeunknown="true" rs:basecatalog="PRINCIPAL" rs:basetable="itensgradeproduto" rs:basecolumn="referencia">
+				<s:datatype dt:type="string" dt:maxLength="50"/>
+			</s:AttributeType>
+			<s:extends type="rs:rowbase"/>
+		</s:ElementType>
+	</s:Schema>
+	<rs:data>
+		<z:row chaveunica="29" codbarraint="7890000000291"/>
+		<z:row chaveunica="30" codbarraint="7890000000307"/>
+		<z:row chaveunica="31" codbarraint="7890000000314"/>
+		<z:row chaveunica="32" codbarraint="7890000000321"/>
+	</rs:data>
+</xml>

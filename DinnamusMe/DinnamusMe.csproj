@@ -1,0 +1,227 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{329EB0BF-8341-47B0-848F-8320788AC0BF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DinnamusMe</RootNamespace>
+    <AssemblyName>DinnamusMe</AssemblyName>
+    <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PlatformFamilyName>PocketPC</PlatformFamilyName>
+    <PlatformID>3C41C503-53EF-4c2a-8DD4-A8217CAD115E</PlatformID>
+    <OSVersion>4.20</OSVersion>
+    <DeployDirSuffix>DinnamusMe</DeployDirSuffix>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FormFactorID>
+    </FormFactorID>
+    <ApplicationIcon>DinnamuS.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.WindowsCE.Forms" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SqlClient, Version=3.0.3600.0, Culture=neutral, PublicKeyToken=3be235df1c8d2ad3, processorArchitecture=MSIL" />
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.0.0, Culture=neutral, PublicKeyToken=3be235df1c8d2ad3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Arquivos de programas\Microsoft SQL Server Compact Edition\v3.5\Devices\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataGrid" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbrirInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbrirInventario.Designer.cs">
+      <DependentUpon>AbrirInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Banco.cs" />
+    <Compile Include="Beep.cs" />
+    <Compile Include="Conferencia.cs" />
+    <Compile Include="CriarArquivo.cs" />
+    <Compile Include="DAO.cs" />
+    <Compile Include="DAOServidor.cs" />
+    <Compile Include="DigitarInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DigitarInventario.Designer.cs">
+      <DependentUpon>DigitarInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExcluirInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExcluirInventario.Designer.cs">
+      <DependentUpon>ExcluirInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FecharContagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FecharContagem.Designer.cs">
+      <DependentUpon>FecharContagem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCarga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCarga.Designer.cs">
+      <DependentUpon>frmCarga.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCFGServidor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCFGServidor.Designer.cs">
+      <DependentUpon>frmCFGServidor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistrarContagem_Lista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistrarContagem_Lista.Designer.cs">
+      <DependentUpon>frmRegistrarContagem_Lista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GerarArquivoInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GerarArquivoInventario.Designer.cs">
+      <DependentUpon>GerarArquivoInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IniciarApp.cs" />
+    <Compile Include="Inventario.cs" />
+    <Compile Include="ManipularArquivos.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AbrirInventario.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AbrirInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DigitarInventario.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DigitarInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExcluirInventario.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ExcluirInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FecharContagem.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FecharContagem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCarga.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCarga.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCFGServidor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCFGServidor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenu.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistrarContagem_Lista.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRegistrarContagem_Lista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GerarArquivoInventario.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GerarArquivoInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UsuariosApp.cs" />
+    <Compile Include="Util.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DinnamuS.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cadproduto.din" />
+    <None Include="itensgradeproduto.din" />
+    <None Include="itensgradeproduto_busca_extra.din" />
+    <Content Include="sincronismo\cadproduto.din">
+    </Content>
+    <Content Include="sincronismo\filial.din">
+    </Content>
+    <Content Include="sincronismo\itensgradeproduto.din">
+    </Content>
+    <Content Include="sincronismo\itensgradeproduto_busca_extra.din">
+    </Content>
+    <Content Include="sincronismo\lojas.din">
+    </Content>
+    <Content Include="sincronismo\usuario.din">
+    </Content>
+    <Content Include="principal.sdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="usuarios.din" />
+  </ItemGroup>
+  <Import Condition="'$(TargetFrameworkVersion)' == 'v1.0'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.v1.targets" />
+  <Import Condition="'$(TargetFrameworkVersion)' == 'v2.0'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
